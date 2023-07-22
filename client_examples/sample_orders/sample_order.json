@@ -1,0 +1,9 @@
+{
+  "orderMemo": "Some order memo",
+  "deliveryAddressLine1": "8478 Court Rd.",
+  "deliveryAddressLine2": "Apt 300",
+  "deliveryCity": "San Francisco",
+  "deliveryState": "CA",
+  "deliveryZipCode": "94102",
+  "shippingMethod": "usps"
+}

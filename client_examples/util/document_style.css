@@ -1,0 +1,57 @@
+@page {
+    margin-top: 1.8cm;
+}
+body { font-family: 'Open Sans', sans-serif; font-size: .6em; }
+div {margin: 10px; padding: 5px; border: 1px solid #000;}
+.message-signature {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 21%;
+  background: #fff;
+  padding: 16px;
+  padding-bottom: 26px;
+}
+div > div > div > div > div > div > div {
+  page-break-inside: avoid;
+}
+.message-signature:after {
+  content: "Prescriber Signature";
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+}
+.header {
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.header div {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.header div.logo {
+  width: 20%;
+}
+.header div.logo img {
+  max-width: 100%;
+}
+.header div.letterhead {
+  Width: 60%;
+}
+.letterhead h1 {
+  margin-bottom: 0;
+}
+.letterhead h3, .letterhead h4 {
+  margin: 0;
+}
+.message-signature img {max-width: 100%;}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="transport.xsd" DatatypesVersion="DatatypesVersion0" TransportVersion="TransportVersion0" TransactionDomain="SCRIPT"
+     TransactionVersion="TransactionVersion0" StructuresVersion="StructuresVersion0" ECLVersion="ECLVersion0">
+    <Header>
+        <To>NCPDPID:5906017:NPI:1730449299</To>
+        <From>YOUR_CLINIC_ID_GOES_HERE</From>
+        <MessageID>MessageID0</MessageID>
+        <RelatesToMessageID>CLINICAL_INFO_REQUEST_MSG_ID</RelatesToMessageID>
+        <SentTime>2006-05-04T18:13:51.0</SentTime>
+        <SenderSoftware>
+            <SenderSoftwareDeveloper>SenderSoftwareDeveloper0</SenderSoftwareDeveloper>
+            <SenderSoftwareProduct>SenderSoftwareProduct0</SenderSoftwareProduct>
+            <SenderSoftwareVersionRelease>SenderSoftwareVersionRelease0</SenderSoftwareVersionRelease>
+        </SenderSoftware>
+    </Header>
+    <Body>
+        <ClinicalInfoResponse>
+            <Patient>
+                <HumanPatient>
+                    <Name>
+                        <LastName>LastName0</LastName>
+                        <FirstName>FirstName0</FirstName>
+                    </Name>
+                    <Gender>M</Gender>
+                    <DateOfBirth>
+                        <Date>2006-05-04</Date>
+<!--                        <DateTime>2006-05-04T18:13:51.0</DateTime>-->
+                    </DateOfBirth>
+                </HumanPatient>
+<!--                <NonHumanPatient>
+                    <Name>
+                        <LastName>LastName1</LastName>
+                        <FirstName>FirstName1</FirstName>
+                    </Name>
+                    <Gender>M</Gender>
+                    <DateOfBirth>
+                        <Date>2006-05-04</Date>
+                    </DateOfBirth>
+                    <Species>
+                        <Text>Text0</Text>
+                        <Code>Code0</Code>
+                    </Species>
+                </NonHumanPatient>-->
+            </Patient>
+            <Pharmacy>
+                <Identification>
+                    <NCPDPID>5906017</NCPDPID>
+                    <NPI>1730449299</NPI>
+                </Identification>
+                <BusinessName>Empower Pharmacy</BusinessName>
+                <Address>
+                    <AddressLine1>5980 W Sam Houston PKWY N.</AddressLine1>
+                    <City>Ste. 300</City>
+                    <StateProvince>Houston</StateProvince>
+                    <PostalCode>TX</PostalCode>
+                    <CountryCode>US</CountryCode>
+                </Address>
+                <CommunicationNumbers>
+                    <PrimaryTelephone>
+                        <Number>8326784417</Number>
+                    </PrimaryTelephone>
+                </CommunicationNumbers>
+            </Pharmacy>
+            <Prescriber>
+                <NonVeterinarian>
+                    <Identification>
+                        <NPI>NPI1</NPI>
+                    </Identification>
+                    <Name>
+                        <LastName>LastName2</LastName>
+                        <FirstName>FirstName2</FirstName>
+                    </Name>
+                    <Address>
+                        <AddressLine1>AddressLine11</AddressLine1>
+                        <City>City1</City>
+                        <StateProvince>StateProvince1</StateProvince>
+                        <PostalCode>PostalCode1</PostalCode>
+                        <CountryCode>Co</CountryCode>
+                    </Address>
+                    <CommunicationNumbers>
+                        <PrimaryTelephone>
+                            <Number>0</Number>
+                        </PrimaryTelephone>
+                    </CommunicationNumbers>
+                </NonVeterinarian>
+<!--                <Veterinarian>
+                    <Identification>
+                        <StateLicenseNumber>StateLicenseNumber0</StateLicenseNumber>
+                    </Identification>
+                    <Specialty>174M00000X</Specialty>
+                    <Name>
+                        <LastName>LastName3</LastName>
+                        <FirstName>FirstName3</FirstName>
+                    </Name>
+                    <Address>
+                    </Address>
+                    <CommunicationNumbers>
+                        <PrimaryTelephone>
+                            <Number>0</Number>
+                        </PrimaryTelephone>
+                    </CommunicationNumbers>
+                </Veterinarian>-->
+            </Prescriber>
+            <Response>
+                <!--<Denied>
+                    <ReasonCode>AA</ReasonCode>
+                    <ReasonCode>AA</ReasonCode>
+                    <ReferenceNumber>ReferenceNumber0</ReferenceNumber>
+                    <DenialReason>DenialReason0</DenialReason>
+                </Denied>-->
+                <Approved>
+                    <!-- The <AdditionalMessageIndicator> is set to true on the first
+                    ClinicalInfoResponse, and to false on the second (and final) ClinicalInfoResponse
+                    transaction.
+
+                    NCPDP_SCRIPT_Standard_Resources/Documentation/NCPDP-XML-Standard-v2018071.pdf, Page number 58
+
+                    Therefore, if multiple responses are being sent in reply to a
+                    ClinicalInfoRequest that came from the server,
+                    they must be chained to the ClinicalInfoRequest Message as stated above,
+                    based on order in which they are sent.
+                    -->
+                    <Note>Note0</Note>
+                    <AdditionalMessageIndicator>false</AdditionalMessageIndicator>
+                    <!--
+                    <ReferenceNumber>ReferenceNumber1</ReferenceNumber>
+                    <MessageToFollowMessageIdentifier>MessageToFollowMessageIdentifier0</MessageToFollowMessageIdentifier>
+                    <NoKnown>Allergies</NoKnown> -->
+                </Approved>
+            </Response>
+            <Consent>Y</Consent>
+            <ClinicalInfoFormatsSupported>
+            </ClinicalInfoFormatsSupported>
+            <ClinicalInfoTypesRequested>All</ClinicalInfoTypesRequested>
+            <ClinicalInfoTypesRequested>All</ClinicalInfoTypesRequested>
+            <ClinicalInfoAttachment>
+                <AttachmentSource>SCAN</AttachmentSource>
+                <AttachmentData>JVBERi0xLjIgCjkgMCBvYmoKPDwKPj4Kc3RyZWFtCkJULyA5IFRmKFRlc3QpJyBFVAplbmRzdHJlYW0KZW5kb2JqCjQgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCA1IDAgUgovQ29udGVudHMgOSAwIFIKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0tpZHMgWzQgMCBSIF0KL0NvdW50IDEKL1R5cGUgL1BhZ2VzCi9NZWRpYUJveCBbIDAgMCA5OSA5IF0KPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1BhZ2VzIDUgMCBSCi9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iagp0cmFpbGVyCjw8Ci9Sb290IDMgMCBSCj4+CiUlRU9G</AttachmentData>
+                <CCR>
+                    <Version>Version3</Version>
+                </CCR>
+                <MIMEType>application/pdf</MIMEType>
+            </ClinicalInfoAttachment>
+        </ClinicalInfoResponse>
+    </Body>
+</Message>

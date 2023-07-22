@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="transport.xsd" DatatypesVersion="DatatypesVersion0" TransportVersion="TransportVersion0" TransactionDomain="SCRIPT"
+     TransactionVersion="TransactionVersion0" StructuresVersion="StructuresVersion0" ECLVersion="ECLVersion0">
+    <Header>
+        <To>NCPDPID:5906017:NPI:1730449299</To>
+        <From>YOUR_CLINIC_ID_GOES_HERE</From>
+        <MessageID>MessageID0</MessageID>
+        <SentTime>2006-05-04T18:13:51.0</SentTime>
+        <!--
+        The following block is required by the Clinic API server in order to establish a
+        record of electronic signature from the prescriber for the prescription.
+        -->
+        <Security>
+            <UsernameToken>
+                <!-- The Username is the Prescriber's CFR. Title 21 Part 11 compliant clinical facility system's EHR/EMR local authentication cleartext credential, under which the Prescriber authenticated and signed the prescription. -->
+                <Username>PrescriberUsername</Username>
+                <!-- The Nonce is a clinical system wide unique ciphertext that can be used to trace the prescriber's electronic signature for the following prescription. -->
+                <Nonce>SAMPLE_ESIGNATURE_NOT_FOR_REAL_USE</Nonce>
+                <!-- The time at which the prescription was electronically signed. -->
+                <Created>2006-05-04T18:13:51.0</Created>
+            </UsernameToken>
+        </Security>
+        <SenderSoftware>
+            <SenderSoftwareDeveloper>SenderSoftwareDeveloper0</SenderSoftwareDeveloper>
+            <SenderSoftwareProduct>SenderSoftwareProduct0</SenderSoftwareProduct>
+            <SenderSoftwareVersionRelease>SenderSoftwareVersionRelease0</SenderSoftwareVersionRelease>
+        </SenderSoftware>
+        <!--
+        The DigitalSignature element is used for controlled substances
+        for MedicationPrescribed information in NewRx, RxChangeResponse
+        and RxRenewalResponse transactions as these are “fillable” prescription
+        transactions per the regulation. Transactions that are not fillable are
+        not required to be signed.
+
+        For electronic prescribing of non-controlled substances, an electronic signature
+        as defined by the E-Sign Act and/or state board of pharmacy rules is required.
+
+        For electronic prescribing of controlled substances, more specific digital signature
+        requirements are defined by the DEA regulations.
+
+        The Clinic API currently only supports non-control substance prescriptions, but support
+        for control prescriptions is being worked on.
+
+        Please see: NCPDPElectronicSignatureGuidanceFinal.pdf for details.
+
+        <DigitalSignature Version="Version0">
+            <DigestMethod>SHA-1</DigestMethod>
+            <DigestValue>DigestValue0</DigestValue>
+            <SignatureValue>SignatureValue0</SignatureValue>
+            <X509Data>X509Data0</X509Data>
+            <DigestMethod>SHA-1</DigestMethod>
+            <DigestValue>DigestValue1</DigestValue>
+            <SignatureValue>SignatureValue1</SignatureValue>
+            <X509Data>X509Data1</X509Data>
+        </DigitalSignature>
+        -->
+    </Header>
+    <Body>
+        <NewRx>
+          <AllergyOrAdverseEvent>
+              <NoKnownAllergies>Y</NoKnownAllergies>
+<!--          <Allergies>
+                  <SourceOfInformation>P</SourceOfInformation>
+                  <EffectiveDate>
+                      <Date>2006-05-04</Date>
+                  </EffectiveDate>
+                  <ExpirationDate>
+                      <Date>2006-05-04</Date>
+                  </ExpirationDate>
+                  <AdverseEvent>
+                      <Text>Text0</Text>
+                  </AdverseEvent>
+                  <DrugProductCoded>
+                      <Text>Text1</Text>
+                  </DrugProductCoded>
+                  <ReactionCoded>
+                      <Text>Text2</Text>
+                  </ReactionCoded>
+                  <SeverityCoded>
+                      <Text>Text3</Text>
+                  </SeverityCoded>
+              </Allergies>-->
+<!--          <Allergies>
+                  <SourceOfInformation>P</SourceOfInformation>
+                  <EffectiveDate>
+                      <Date>2006-05-04</Date>
+                  </EffectiveDate>
+                  <ExpirationDate>
+                      <Date>2006-05-04</Date>
+                  </ExpirationDate>
+                  <AdverseEvent>
+                      <Text>Text4</Text>
+                  </AdverseEvent>
+                  <DrugProductCoded>
+                      <Text>Text5</Text>
+                  </DrugProductCoded>
+                  <ReactionCoded>
+                      <Text>Text6</Text>
+                  </ReactionCoded>
+                  <SeverityCoded>
+                      <Text>Text7</Text>
+                  </SeverityCoded>
+              </Allergies>-->
+            </AllergyOrAdverseEvent>
+            <Patient>
+                <HumanPatient>
+                    <Name>
+                        <LastName>LastName0</LastName>
+                        <FirstName>FirstName0</FirstName>
+                    </Name>
+                    <Gender>M</Gender>
+                    <DateOfBirth>
+                        <Date>2006-05-04</Date>
+<!--                    <DateTime>2006-05-04T18:13:51.0</DateTime>-->
+                    </DateOfBirth>
+                    <Address>
+                        <AddressLine1>AddressLine10</AddressLine1>
+                        <City>City0</City>
+                        <StateProvince>StateProvince0</StateProvince>
+                        <PostalCode>PostalCode0</PostalCode>
+                        <CountryCode>Co</CountryCode>
+                    </Address>
+                </HumanPatient>
+<!--            <NonHumanPatient>
+                    <Name>
+                        <LastName>LastName1</LastName>
+                        <FirstName>FirstName1</FirstName>
+                    </Name>
+                    <Gender>M</Gender>
+                    <DateOfBirth>
+                        <Date>2006-05-04</Date>
+                    </DateOfBirth>
+                    <Species>
+                        <Text>Text0</Text>
+                        <Code>Code0</Code>
+                    </Species>
+                </NonHumanPatient>-->
+            </Patient>
+            <Prescriber>
+                <NonVeterinarian>
+                    <Identification>
+                        <NPI>NPI0</NPI>
+                        <!-- <StateLicenseNumber>StateLicenseNumber0</StateLicenseNumber> -->
+                        <!-- <DEANumber>DEANumber0</DEANumber> -->
+                    </Identification>
+                    <!-- 208800000X is Urologist; Specialty of prescriber. Health Care Provider Taxonomy Code http://www.wpc-edi.com/reference/codelists/healthcare/health-care-provider-taxonomy-code-set/ -->
+                    <Specialty>208800000X</Specialty>
+                    <!--<PracticeLocation>
+                      <Identification>
+                        <NCPDPID>NCPDPID4</NCPDPID>
+                        <StateLicenseNumber>StateLicenseNumber3</StateLicenseNumber>
+                        <DEANumber>DEANumber2</DEANumber>
+                        <NPI>NPI1</NPI>
+                      </Identification>
+                      <BusinessName>South Freeway Clinic</BusinessName>
+                    </PracticeLocation>-->
+                    <Name>
+                        <LastName>LastName2</LastName>
+                        <FirstName>FirstName2</FirstName>
+                    </Name>
+                    <Address>
+                        <AddressLine1>AddressLine11</AddressLine1>
+                        <City>City1</City>
+                        <StateProvince>StateProvince1</StateProvince>
+                        <PostalCode>PostalCode1</PostalCode>
+                        <CountryCode>US</CountryCode>
+                    </Address>
+                    <CommunicationNumbers>
+                        <PrimaryTelephone>
+                            <Number>0</Number>
+                        </PrimaryTelephone>
+                    </CommunicationNumbers>
+                </NonVeterinarian>
+<!--            <Veterinarian>
+                    <Identification>
+                        <StateLicenseNumber>StateLicenseNumber0</StateLicenseNumber>
+                    </Identification>
+                    <Specialty>174M00000X</Specialty>
+                    <Name>
+                        <LastName>LastName3</LastName>
+                        <FirstName>FirstName3</FirstName>
+                    </Name>
+                    <Address>
+                    </Address>
+                    <CommunicationNumbers>
+                        <PrimaryTelephone>
+                            <Number>0</Number>
+                        </PrimaryTelephone>
+                    </CommunicationNumbers>
+                </Veterinarian>-->
+            </Prescriber>
+            <MedicationPrescribed>
+                <DrugDescription>DrugDescription0</DrugDescription>
+                <Quantity>
+                    <Value>0</Value>
+                    <CodeListQualifier>38</CodeListQualifier>
+                    <QuantityUnitOfMeasure>
+                        <Code>C69071</Code> <!-- C69071 is Disintegrating Tablet; List available under NCPDP_SCRIPT_Standard_Resources/Unit_of_Measure_Terminology in files: NCPDP.txt, NCPDP.xsl, NCPDP.xslx  -->
+                    </QuantityUnitOfMeasure>
+                </Quantity>
+                <WrittenDate>
+                    <Date>2006-05-04</Date>
+<!--                <DateTime>2006-05-04T18:13:51.0</DateTime>-->
+                </WrittenDate>
+                <Substitutions>0</Substitutions>
+                <NumberOfRefills>0</NumberOfRefills>
+                <Sig>
+                    <SigText>SigText0</SigText>
+                </Sig>
+            </MedicationPrescribed>
+        </NewRx>
+    </Body>
+</Message>

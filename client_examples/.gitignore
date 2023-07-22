@@ -1,0 +1,4 @@
+tmp/*.pdf
+tmp/*.xml
+tmp/*.json
+config/*.json

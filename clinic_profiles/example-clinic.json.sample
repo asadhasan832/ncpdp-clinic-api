@@ -1,0 +1,22 @@
+{
+      "clinicName": "Sample Clinic",
+      "clinicLogo": "https://www.empowerpharmacy.com/themes/empower_pharmacy_theme/logo.svg",
+      "timezone": "America/New_York",
+      "email": "ahasan@empowerpharmacy.com",
+      "contactName": "Andy Large",
+      "contactNumber": "(832) 678-4417",
+      "contactFax": "(832) 678-4419",
+      "contactEmail": "alarge@empowerpharmacy.com",
+      "ccLastFour": "4434",
+      "ccExpDate": "02/21",
+      "clinicLineFirst": "5980 W Sam Houston PKWY N.",
+      "clinicLineSecond": "Ste. 300",
+      "clinicCity": "Houston",
+      "clinicState": "TX",
+      "clinicZip": "77041",
+      "shipLineFirst": "5980 W Sam Houston PKWY N.",
+      "shipLineSecond": "Ste. 300",
+      "shipCity": "Houston",
+      "shipState": "TX",
+      "shipZip": "77041"
+  }

@@ -1,0 +1,26 @@
+{
+  "name": "client_examples",
+  "version": "1.0.0",
+  "description": "Client examples for Empower Pharmacy Clinic API.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.7.8",
+    "electron-pdf": "^1.2.5",
+    "express": "^4.16.4",
+    "express-static": "^1.2.6",
+    "find-free-port": "^2.0.0",
+    "generate-password": "^1.4.1",
+    "hat": "0.0.3",
+    "hummus-recipe": "^1.8.0",
+    "lodash": "^4.17.11",
+    "pdf-parse": "^1.1.1",
+    "request": "^2.88.0",
+    "rimraf": "^2.6.2",
+    "shortid": "^2.2.14",
+    "xml2js": "^0.4.19"
+  }
+}

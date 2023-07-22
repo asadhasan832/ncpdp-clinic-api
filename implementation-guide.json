@@ -1,0 +1,20 @@
+{
+  "launch_options": {
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
+  },
+  "headless": true,
+  "body_class": ["markdown-body"],
+  "highlight_style": "mono-blue",
+  "css": "ul{list-style-position: outside;} ol{list-style-position: inside;} a {text-decoration: none;} .secnote {page-break-after: avoid; background: #0095db57; border: 4px solid #0095db; padding: 10px;} .secnote h3 {color: #005392;} div.title {text-align: center; margin-top:-20px; padding:0; }",
+  "pdf_options": {
+    "format": "A4",
+    "margin": "1in 1in",
+    "printBackground": true,
+    "displayHeaderFooter": true,
+    "headerTemplate": "<style>\n      section {\n        margin: 0 auto;\n        font-family: system-ui;\n        font-size: 11px;\n      }\n    </style>\n    <section>\n      Clinic API Implementation Guide\n    </section>",
+    "footerTemplate": "<section>\n      <div>\n        Page <span class=\"pageNumber\"></span>\n        of <span class=\"totalPages\"></span>\n      </div>\n    </section>"
+  }
+}
